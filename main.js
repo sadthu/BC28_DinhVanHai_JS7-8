@@ -156,8 +156,8 @@ document.querySelector('#inRealNum').setAttribute("type", "number");
 addRealNumber.onclick = function () {
     var inRealNum = Number(document.querySelector('#inRealNum').value);
     _arrRealNumber.push(inRealNum);
-    document.querySelector('#rNumber').innerHTML = '[ ' + _arrRealNumber + ' ]';
-       
+    document.querySelector('#inRealNum').value = '';
+    document.querySelector('#rNumber').innerHTML = '[ ' + _arrRealNumber + ' ]';      
 }
 
 btnCountRealNumber.onclick = function () {
@@ -183,13 +183,13 @@ btnConfront.onclick = function () {
         }
     }
     if (posNum == negaNum) {
-        html = 'dương = âm';
+        html = 'dương = âm' + '<br/>' + 'Số dương: ' + posNum + '<br/>' + 'Số âm: ' + negaNum;
     } 
     if (posNum < negaNum) {
-        html = 'dương < âm';
+        html = 'dương < âm' + '<br/>' + 'Số dương: ' + posNum + '<br/>' + 'Số âm: ' + negaNum;
     } 
     if (posNum > negaNum) {
-        html = 'dương > âm';
+        html = 'dương > âm' + '<br/>' + 'Số dương: ' + posNum + '<br/>' + 'Số âm: ' + negaNum;
     }
     document.querySelector('#result10').innerHTML = html;
 
