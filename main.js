@@ -8,7 +8,7 @@ addNumber.onclick = function () {
         _arrNumber.push(inNumber);
         document.querySelector('#inNumber').value = '';
     }
-    document.querySelector('#result').innerHTML = '[ ' + _arrNumber + ' ]';
+    document.querySelector('#result0').innerHTML = '[ ' + _arrNumber + ' ]';
 }
 
 // bài 1: tính tổng số dương
@@ -19,7 +19,7 @@ total.onclick = function () {
             posTotal += _arrNumber[i];
         }
     }
-    document.querySelector('#result2').innerHTML = 'Tổng số dương: ' + posTotal;
+    document.querySelector('#result1').innerHTML = 'Tổng số dương: ' + posTotal;
     
 }
 
@@ -31,7 +31,7 @@ count.onclick = function () {
             amount += 1;
         }
     }
-    document.querySelector('#result3').innerHTML = 'Số dương: ' + amount;
+    document.querySelector('#result2').innerHTML = 'Số dương: ' + amount;
 }
 
 // bài 3: tìm số nhỏ nhất trong mảng
@@ -42,7 +42,7 @@ search.onclick = function () {
             smallest = i;
         }
     }
-    document.querySelector('#result4').innerHTML = 'Số nhỏ nhất: ' + _arrNumber[smallest];
+    document.querySelector('#result3').innerHTML = 'Số nhỏ nhất: ' + _arrNumber[smallest];
 }
 
 // bài 4: tìm số dương nhỏ nhất trong mảng
@@ -61,9 +61,9 @@ searchSoDuong.onclick = function () {
                 smallPosNum = i;
             }
         }
-        document.querySelector('#result5').innerHTML = 'Số dương nhỏ nhất: ' + arrPosNum[smallPosNum];
+        document.querySelector('#result4').innerHTML = 'Số dương nhỏ nhất: ' + arrPosNum[smallPosNum];
     } else {
-        document.querySelector('#result5').innerHTML = 'Không có số dương.';
+        document.querySelector('#result4').innerHTML = 'Không có số dương.';
     }
 }
 
@@ -73,11 +73,11 @@ evenNumber.onclick = function () {
     for (var i = 0; i < _arrNumber.length; i++) {
         if (_arrNumber[i] % 2 == 0) {
             arrEvenNum.push(_arrNumber[i]);
-            document.querySelector('#result6').innerHTML = 'Số chẵn cuối:' + _arrNumber[i];
+            document.querySelector('#result5').innerHTML = 'Số chẵn cuối:' + _arrNumber[i];
         }
     }
     if (arrEvenNum.length == 0) {
-        document.querySelector('#result6').innerHTML = 'Không có số chẵn.';
+        document.querySelector('#result5').innerHTML = 'Không có số chẵn.';
     }
 }
 
@@ -94,7 +94,7 @@ btnChangeLocal.onclick = function () {
     } else {
         inHtml = 'Nhập đúng vị trí trong mảng';
     }
-    document.querySelector('#result7').innerHTML = 'Mảng sau khi đổi: ' + inHtml;
+    document.querySelector('#result6').innerHTML = 'Mảng sau khi đổi: ' + inHtml;
 }
 
 // bài 7: sắp xếp mảng theo giá trị tăng dần
@@ -121,7 +121,7 @@ btnArrange.onclick = function () {
             _arrNumber[min] = mediate;
         }
     }
-    document.querySelector('#result8').innerHTML ='Mảng sau khi sắp xếp: ' + _arrNumber;
+    document.querySelector('#result7').innerHTML ='Mảng sau khi sắp xếp: ' + _arrNumber;
 }
 
 // bài 8: tìm số nguyên tố đầu tiên trong mảng
@@ -136,7 +136,7 @@ btnFindPrimeNum.onclick = function () {
             html = 'Mảng không có số nguyên tố.';
         }
     }
-    document.querySelector('#result9').innerHTML = html;
+    document.querySelector('#result8').innerHTML = html;
 }
 
 function primeNum (index) {
@@ -167,7 +167,7 @@ btnCountRealNumber.onclick = function () {
             count++;
         }
     }
-    document.querySelector('#result10').innerHTML = 'Số nguyên: ' + count;
+    document.querySelector('#result9').innerHTML = 'Số nguyên: ' + count;
 }
 
 // bài 10: so sánh số lượng số dương và số âm
@@ -191,7 +191,7 @@ btnConfront.onclick = function () {
     if (posNum > negaNum) {
         html = 'dương > âm';
     }
-    document.querySelector('#result11').innerHTML = html;
+    document.querySelector('#result10').innerHTML = html;
 
 } 
 
